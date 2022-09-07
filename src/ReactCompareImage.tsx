@@ -114,6 +114,10 @@ const ReactCompareImage: React.FC<IProps> = props => {
     };
   }, [rightImage]);
 
+  useEffect(() => {
+    setSliderPosition(sliderPositionPercentage);
+  }, [sliderPositionPercentage]);
+
   const allImagesLoaded = rightImgLoaded && leftImgLoaded;
 
   useEffect(() => {
